@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'LDOTiledView_Example' do
+  pod 'LDOTiledView', :path => '../'
+
+  target 'LDOTiledView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

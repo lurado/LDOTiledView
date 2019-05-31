@@ -8,7 +8,7 @@
 
 ## Usage
 
-- Add `LDOTiledView` to your view hieararchy (you probalby want to embed it into a `UIScrollView`).
+- Add `LDOTiledView` to your view hierarchy (you probably want to embed it into a `UIScrollView`).
 - Set `maximumZoomLevel`, `imageSize` and `tileSize` (details see below).
 - Implement the only method of `LDOTiledViewDataSource`
   ```swift
@@ -51,19 +51,19 @@ That means no matter how large the image is, roughly the same number of small sq
 The tile size specifies the size of the small squares you sliced your large image into. 
 It is defined in points.
 That means if you set your tile size to 256x256, your retina tiles have to be 512x512 px.
-Consequently Non-Retina, Retina and High Retina images are sliced into the same number of tiles.
+Consequently non-Retina, Retina and Super Retina images are sliced into the same number of tiles.
 
 ### Loading Tiles
 
 A common complaint about the underlying `CATiledLayer` is that it sometimes displays black squares instead of image tiles.
-In our experience this is actually not a problem of `CATiledLayer`, but caused by a failing image load.
-Sometimes `UIImage(named:)` will return `nil`, if it's called too frequently (this might be caused by the caching performed by `UIImage(named:)` and the fact that the tile loading happens asynchronously).
+In our experience, this is actually not a problem of `CATiledLayer`, but caused by a failing image load.
+Sometimes `UIImage(named:)` will return `nil` if it's called too frequently. (This might be caused by the caching performed by `UIImage(named:)`, and the fact that the tile loading happens asynchronously.)
 Loading the images as `Data` and creating the `UIImage` from that worked flawlessly for us. YMMV.
 
-### Generate Tiles
+### Generating Tiles
 
 While there are no strict requirements on how you create your image tiles, we included a small [Ruby script](gen_tiles.rb) to get you started.
-It is based on [libvips](https://libvips.github.io/libvips/) so be sure to have that installed if you want to use it.
+It is based on [libvips](https://libvips.github.io/libvips/), so be sure to have that installed if you want to use it.
 
 The script uses the input image for the largest zoom level at the highest scale (1x/2x/3x).
 It then scales the image down for all smaller zoom levels and scales.
@@ -96,7 +96,7 @@ Raschke & Ludwig GbR, https://www.lurado.com/
 
 ## License
 
-LDOGradientView is available under the MIT license.
+LDOTiledView is available under the MIT license.
 See the [LICENSE](LICENSE) file for more information.
 
 ## Credits

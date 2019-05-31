@@ -1,42 +1,20 @@
-#
-# Be sure to run `pod lib lint LDOTiledView.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'LDOTiledView'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of LDOTiledView.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.version          = '1.0.0'
+  s.summary          = 'Makes CATiledLayer simple to use.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+There is no better way to display huge images than CATiledLayer. However it can be a tricky to use.
+LDOTiledView does the heavy lifing, handles it quirks and provides a minimal and easy to use interface.
                        DESC
 
-  s.homepage         = 'https://github.com/sebastianludwig/LDOTiledView'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/lurado/LDOTiledView'
+  s.screenshots      = "https://github.com/lurado/LDOTiledView/blob/master/Screenshots/LDOTiledView.png?raw=true"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'sebastianludwig' => 'sebastian@lurado.de' }
-  s.source           = { :git => 'https://github.com/sebastianludwig/LDOTiledView.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "Julian Raschke und Sebastian Ludwig GbR" => "info@lurado.com" }
+  s.source           = { :git => 'https://github.com/lurado/LDOGradientView.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'LDOTiledView/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'LDOTiledView' => ['LDOTiledView/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

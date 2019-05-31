@@ -1,0 +1,16 @@
+PODS:
+  - LDOTiledView (1.0.0)
+
+DEPENDENCIES:
+  - LDOTiledView (from `../`)
+
+EXTERNAL SOURCES:
+  LDOTiledView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LDOTiledView: 2cacbe8e872b6f0150b04a5f09fc2b23d6242d13
+
+PODFILE CHECKSUM: 48bac23434733fc1281bf5cd8c55bf626aa00746
+
+COCOAPODS: 1.5.3

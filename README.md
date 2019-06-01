@@ -26,6 +26,7 @@ Repeatadly doubling the size of an image, the zoom scale grows as follows: 1, 2,
 In its smallest resolution an image is at zoom level 1. 
 At twice the size it's at level 2, doubling the size again is level 3 and so on.
 The zoom level grows linearly and at every level the image is twice as large as on the previous level.
+This is also how tiled maps (Google Maps, OpenStreetMaps, etc) work.
 
 ### Image Size
 

@@ -15,6 +15,15 @@
   func tiledView(_ tiledView: LDOTiledView, tileForRow row: Int, column: Int, zoomLevel: Int) -> UIImage?
   ```
 
+**UIScrollView Setup**:
+
+- Embed the `LDOTiledView` in a `UIScrollView`.
+- Constrain its leading, top, trailing and bottom space to its container/superview (the `UIScrollView`).
+- Setup and implement a `UIScrollViewDelegate`.
+- Return the `LDOTiledView` instance from `viewForZooming(in scrollView: UIScrollView) -> UIView?`.
+
+If you want to see an implementation of this, please check out the [example](#example) app.
+
 ### Zoom Level vs Zoom Scale
 
 A typical use case for `LDOTiledView` is to be able to zoom into an image. 

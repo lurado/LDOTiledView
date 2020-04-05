@@ -89,7 +89,17 @@ Check `gen_tiles.rb --help` for more details.
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project:
+
+1. `git clone https://github.com/lurado/LDOTiledView.git`
+
+1. `cd LDOTiledView/Example/`
+
+1. `pod install`
+
+1. `open LDOTiledView.xcworkspace`
+
+1. Trigger **_Build and then run the current scheme_** in Xcode
 
 ## Installation
 

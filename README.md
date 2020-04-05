@@ -26,13 +26,13 @@ If you want to see an implementation of this, please check out the [example](#ex
 
 ### Zoom Level vs Zoom Scale
 
-A typical use case for `LDOTiledView` is to be able to zoom into an image. 
-This is done by embedding it in a `UIScrollView`. 
+A typical use case for `LDOTiledView` is to be able to zoom into an image.
+This is done by embedding it in a `UIScrollView`.
 However `UIScrollView.zoomScale` refers to the content size (as area) and thus grows exponentially.
 Repeatadly doubling the size of an image, the zoom scale grows as follows: 1, 2, 4, 8.
 
-`LDOTiledView` works with the more intuitive concept of zoom levels. 
-In its smallest resolution an image is at zoom level 1. 
+`LDOTiledView` works with the more intuitive concept of zoom levels.
+In its smallest resolution an image is at zoom level 1.
 At twice the size it's at level 2, doubling the size again is level 3 and so on.
 The zoom level grows linearly and at every level the image is twice as large as on the previous level.
 This is also how tiled maps (Google Maps, OpenStreetMaps, etc) work.
@@ -58,7 +58,7 @@ In this example `maximumZoomLevel` would be 4 and `imageSize` would be 410 x 890
 The general idea behind `CATiledLayer` and thus `LDOTiledView` is that instead of loading a huge image into memory at once, the image is split up in smaller sqares and only the squares that are currently visible are loaded.
 That means no matter how large the image is, roughly the same number of small squares are loaded at any given time. As result the memory consumption is (nearly) constant and independant of the image dimensions.
 
-The tile size specifies the size of the small squares you sliced your large image into. 
+The tile size specifies the size of the small squares you sliced your large image into.
 It is defined in points.
 That means if you set your tile size to 256x256, your retina tiles have to be 512x512 px.
 Consequently non-Retina, Retina and Super Retina images are sliced into the same number of tiles.
@@ -113,6 +113,6 @@ See the [LICENSE](LICENSE) file for more information.
 
 Inspired by and based on [JCTiledScrollView](https://github.com/jessedc/JCTiledScrollView).
 
-The earth image in the example project comes from [NASA's earth observatory](https://earthobservatory.nasa.gov/images/84214/blue-marble-eastern-hemisphere): 
-NASA Earth Observatory image by Robert Simmon, using Suomi NPP VIIRS imagery from NOAA's Environmental Visualization Laboratory. 
+The earth image in the example project comes from [NASA's earth observatory](https://earthobservatory.nasa.gov/images/84214/blue-marble-eastern-hemisphere):
+NASA Earth Observatory image by Robert Simmon, using Suomi NPP VIIRS imagery from NOAA's Environmental Visualization Laboratory.
 Suomi NPP is the result of a partnership between NASA, NOAA and the Department of Defense
